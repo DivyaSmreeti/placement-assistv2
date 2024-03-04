@@ -1,0 +1,173 @@
+<!-- <!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+     Required meta tags
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    Bootstrap CSS 
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+     Style --
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Multiple user login</title>
+  </head>
+  <body>
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        < <div class="col-md-6 order-md-2">
+          <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+        </div> 
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="form-block">
+                  <div class="mb-4">
+                </div>
+
+              <span class="mb-0 text-muted">
+                {% if msg %}
+                    {{ msg | safe }}
+                {% else %}
+                    Login page
+                {% endif %}
+              </span>
+                <form  method="post">
+                    {% csrf_token %}
+                  <div class="form-group first">
+                    <label for="username">Username</label>
+                      {{ form.username }}
+                  </div>
+                  <div class="form-group last mb-4">
+                    <label for="username">Password</label>
+                    {{ form.password }}
+                  </div>
+
+                  <div class="d-flex mb-5 align-items-center">
+                    <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                      <input type="checkbox" checked="checked"/>
+                      <div class="control__indicator"></div>
+                    </label>
+                    <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                  </div>
+
+                  <input type="submit" value="Log In" class="btn btn-pill text-white btn-block btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>  -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/css/login.css">
+    <title>Placement Assist</title>
+</head>
+<body>
+    <div class="loginpage-wrap">
+        <div class="login-page">
+            <div class="container-fluid fc">
+                <div class="row login-row">
+                    <div class="col-xs-12 col-sm-12 col-lg-7 main-column1">
+                        <div class="main-column1-wrapper mt-5">
+                            <h3 class="login-title">
+                                {% comment %} Log In to your Account {% endcomment %}
+                                <span class="mb-0 text-muted">
+                                  {% if msg %}
+                                      {{ msg | safe }}
+                                  {% else %}
+                                  Log In to your Account
+                                  {% endif %}
+                                </span>
+                            </h3>
+                            <div class="login-form-wrapper ">
+                                <form class="login-form" method="post">
+                                  {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="username" class="form-label">Username</label>
+                                        {% comment %} <input name="username" type="text" placeholder="{{ form.username }}" class="form-control"/> {% endcomment %}
+                                        {{ form.username }}
+                                    </div>
+                                    <div class="form-group mt-4">
+                                        <label for="username" class="form-label">Password</label>
+                                        {% comment %} <input name="password" type="password" placeholder="Enter your Password" class="form-control"/>{{ form.password }} {% endcomment %}
+                                        {{ form.password }}
+                                    </div>
+                                    <div class="form-group mt-5">
+                                        <div class="d-grid">
+                                            <input type="submit" value="Log In" class="btn login-btn"/>
+                                        </div>
+                                    </div>
+                                </form> 
+
+                                {% comment %} <form  method="post">
+                                  {% csrf_token %}
+                                <div class="form-group first">
+                                  <label for="username">Username</label>
+                                    {{ form.username }}
+                                </div>
+                                <div class="form-group last mb-4">
+                                  <label for="username">Password</label>
+                                  {{ form.password }}
+                                </div>
+              
+                                <div class="d-flex mb-5 align-items-center">
+                                  <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                                    <input type="checkbox" checked="checked"/>
+                                    <div class="control__indicator"></div>
+                                  </label>
+                                  <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                                </div>
+              
+                                <input type="submit" value="Log In" class="btn btn-pill text-white btn-block btn-primary">
+                              </form> {% endcomment %}
+
+
+                                <div class="signup-content mt-3 text-center">
+                                    <p><a href="#"> Don't have an account ? Advance to Register </a></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-5 main-column2">
+                        <div class="main-col2-wrapper">
+                            <div class="main-img-wrapper">
+                                <img src="../static/fonts/icomoon/images/loginpageimg.svg" class="login-page-image" alt="login-page-image">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

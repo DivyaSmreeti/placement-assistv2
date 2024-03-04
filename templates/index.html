@@ -1,0 +1,114 @@
+{% comment %} <!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Multiple user login</title>
+  </head>
+  <body>
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="form-block">
+                  <div class="mb-4">
+                      <h1>Welcome Mr. Django </h1>
+                  </div>
+                  <label>Log in if you already have registered!</label>
+                  <div class="form-group last mb-4">
+                      <div><button class="btn btn-pill text-white btn-block btn-primary"><a href="{% url 'login_view' %}">login</a></button></div>
+                  </div>
+                  <label>If not register here!</label>
+                  <div class="form-group last mb-4">
+                      <div><button class="btn btn-pill text-white btn-block btn-primary"><a href="{% url 'register' %}">register</a></button></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html> {% endcomment %}
+
+{% comment %} NEW {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placement Assist</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/css/css/landing.css"/>
+  </head>
+  <body>
+    <div class="landing-wrap">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mynav">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Placement Assist</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <div class="button-grp">
+                  <a href="{% url 'login_view' %}" class="btn btn-primary mybtns" type="submit">Login</a>
+                  <a href="{% url 'register' %}" class="btn btn-primary mybtns" type="submit">SignUp</a>
+                </div>
+              </div>
+          </nav>
+
+      <div class="main-content p-5 text-center">
+        <h1>Placement Assist</h1>
+        <p class="pb-3">
+          Welcome to Placement Assist, a comprehensive Placement Management System designed to streamline and enhance the entire campus recruitment process.  This web application aims to bridge the gap between students, recruiters, and the placement office, ensuring a seamless and efficient placement experience.
+
+        </p>
+        <a class="btn btn-primary mybtns" href="{% url 'login_view' %}">Login to our Platform </a>
+        
+      </div>
+      <!-- <img class="myimg" src="https://welcome.micro.blog/uploads/2023/21dde6c7e1.png"/> -->
+    </div>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
