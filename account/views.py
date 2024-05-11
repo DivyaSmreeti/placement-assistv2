@@ -42,7 +42,7 @@ def login_view(request):
             msg='error validating form'
     return render(request,'login.html',{'form':form,'msg':msg})
 
-def admin(request):
-    return render(request,'admin.html')
-def student(request):
-    return render(request,'customer.html')
+# def admin(request):
+#     return render(request,'admin.html')
+# def student(request):
+#     return render(request,'customer.html')
