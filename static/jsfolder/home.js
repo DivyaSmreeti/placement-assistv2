@@ -22,34 +22,59 @@ $(document).ready(function () {
 
 function showpage1()
 {
+    document.getElementById("pageCommentContent").style.display="none";
     document.getElementById("page1Content").style.display="block";
     document.getElementById("page2Content").style.display="none";
     document.getElementById("page3Content").style.display="none";
+    
     document.getElementById("frame").style.display="none";
+    
 }
 function showpage2()
 {
+    document.getElementById("pageCommentContent").style.display="none";
     document.getElementById("page1Content").style.display="none";
     document.getElementById("page2Content").style.display="block";
     document.getElementById("page3Content").style.display="none";
+    
     document.getElementById("frame").style.display="none";
+    
     
 }
 function showpage3()
 {
+    document.getElementById("pageCommentContent").style.display="none";
     document.getElementById("page3Content").style.display="block";
     document.getElementById("page1Content").style.display="none";
     document.getElementById("page2Content").style.display="none";
     document.getElementById("frame").style.display="none";
+    
 }
 
 function showdb()
 {
+    document.getElementById("pageCommentContent").style.display="none";
     document.getElementById("frame").style.display="block";
     document.getElementById("page3Content").style.display="none";
     document.getElementById("page1Content").style.display="none";
     document.getElementById("page2Content").style.display="none";
+    
 }
+// for click menu
+      function showcomment()
+      {
+        document.getElementById("pageCommentContent").style.display="block";
+          document.getElementById("page1Content").style.display="none";
+          document.getElementById("page2Content").style.display="none";
+          document.getElementById("page3Content").style.display="none";
+          
+          document.getElementById("frame").style.display="none";   
+      }
+      document.querySelector('#studentchat').addEventListener('click', function () {
+    showcomment();
+      });
+
+
 
 
 document.querySelector('#details').addEventListener('click', function () {
@@ -69,6 +94,7 @@ document.querySelector('#db').addEventListener('click', function () {
 
 
 
+
 /* sidebar navigation ends */
 
 
@@ -83,16 +109,7 @@ document.addEventListener("change", function(event) {
   });
 
 
-  // function showForm() {
-  //   document.getElementById('driveForm').style.display = 'block';
-  // }
-  // function openModal() {
-  //   document.getElementById('myModal').style.display = 'flex';
-  // }
-
-  // function closeModal() {
-  //   document.getElementById('myModal').style.display = 'none';
-  // }
+  
 
 
   function displayDriveInfo() {
@@ -133,4 +150,6 @@ document.addEventListener("change", function(event) {
     displayDriveInfo(); // Calling the function to display the drive information
   });
 
+
+  
   

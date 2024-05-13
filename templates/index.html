@@ -69,10 +69,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../static/css/css/landing.css"/>
+    <link rel="stylesheet" href="../static/css/css/homepage.css"/>
   </head>
   <body>
-    <div class="landing-wrap">
+    <!-- <div class="landing-wrap">
         <nav class="navbar navbar-expand-lg navbar-light bg-light mynav">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Placement Assist</a>
@@ -100,8 +100,47 @@
         <a class="btn btn-primary mybtns" href="{% url 'login_view' %}">Login to our Platform </a>
         
       </div>
-      <!-- <img class="myimg" src="https://welcome.micro.blog/uploads/2023/21dde6c7e1.png"/> -->
-    </div>
+    </div> -->
+
+    <!-- NEW PAGE STARTS -->
+    <div id="root" class="container-fluid">
+      <div class="color1"></div>
+      <div class="color2"></div>
+      <div class="color3"></div>
+      <div class="color4"></div>
+      <div class="main-contentwrap">
+      <div class="container maincontent">
+          <div class="row">
+              <header class="header-wrap">
+                  <div class="header-box">
+                      <div class="logo">PLACEMENT ASSIST</div>
+                      <div class="buttons-grp">
+                          <a href="{% url 'login_view' %}" class="login-btn1" type="submit">Login</a>
+                          <a href="{% url 'register' %}" class="register-btn1" type="submit">SignUp</a>
+                      </div>
+                  </div>
+              </header>
+          </div>
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-lg-12 col-xl-6">
+                  <div class="main-content-wrap">
+                      <p>
+                        Welcome to Placement Assist, a comprehensive Placement Management System designed to streamline and enhance the entire campus recruitment process.  This web application aims to bridge the gap between students, recruiters, and the placement office, ensuring a seamless and efficient placement experience.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-lg-12 col-xl-6 main-column2">
+                  <div class="main-img-wrap">
+                      <div class="main-img">
+                          <img src="../static/images/landingpage.jpg" alt="Landing_page_image"/>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+    <!-- NEW PAGE ENDS -->
 
 
 

@@ -33,7 +33,6 @@
 }
 .form-group .form-control{
     border-radius: 8px;
-    /* width: 80%; */
     padding: 10px;
 }
 .d-grid{
@@ -49,7 +48,6 @@
     text-decoration: none !important;
 }
 .login-btn:hover {
-    /* moz-transition: all 1s ease-in-out!important; */
     background-image: linear-gradient(89.25deg,#000000,#737373,#000000,#737373)!important;
     background-position: 100% 0!important;
     background-size: 300% 100%!important;

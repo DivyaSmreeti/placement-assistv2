@@ -1,13 +1,14 @@
 {% comment %} <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>admin page</title>
-</head>
-<body>
-    <h1> hello {{ user.username }} your role is admin</h1>
-</body>
-</html> {% endcomment %}
+  </head>
+  <body>
+    <h1>hello {{ user.username }} your role is admin</h1>
+  </body>
+</html>
+{% endcomment %}
 
 <!DOCTYPE html>
 <html>
@@ -59,52 +60,26 @@
         </div>
 
         <ul class="list-unstyled components">
-          <!-- <p>Dummy Heading</p> -->
           <li>
-            <i class="fa-solid fa-house" style="color: #ffffff"></i>
-            <a id="db" href="#"> Dashboard</a>
-          </li>
-          <li>
-            <a href="#" id="details">Student Details</a>
-          </li>
-          <li>
-            <a href="#" id="drives">Placement Drives</a>
+            <a id="admin-db" > Dashboard</a>
           </li>
           <!-- <li>
-            <a
-              href="#pageSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle"
-              >Pages</a
-            >
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-              <li>
-                <a href="#">Page 1</a>
-              </li>
-              <li>
-                <a href="#">Page 2</a>
-              </li>
-              <li>
-                <a href="#">Page 3</a>
-              </li>
-            </ul>
+            <a  id="admin-studentinfo">Student Details</a>
           </li> -->
           <li>
-            <a href="#" id="calendar">Full Calendar</a>
+            <a  id="admin-drives">Placement Drives</a>
           </li>
           <li>
-            <a href="#" id="exams">Exams</a>
+            <a  id="admin-calendar">Full Calendar</a>
+          </li>
+          <li>
+            <a  id="admin-exams">Exams</a>
           </li>
         </ul>
 
         <ul class="list-unstyled CTAs">
-          <!-- <li>
-            <a type="button" id="newPostLink" class="download">New Post</a>
-            <button type="button" id="newPostLink" class="btn btn-success download">New Post</button> 
-          </li> -->
           <li>
-            <a href="#" class="article">Log Out</a>
+            <a  class="article">Log Out</a>
           </li>
         </ul>
       </nav>
@@ -132,17 +107,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Page1</a>
+                  <a class="nav-link" href="#">ADMIN</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Page2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Page3</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Page4</a>
-                </li>
+                
               </ul>
             </div>
           </div>
@@ -151,95 +118,9 @@
         <!-- CONTENT AREA STARTS -->
 
         <!-- DASHBOARD AREA STARTS  -->
-        <div id="frame">
+        <div id="admin-disp-db">
           <div class="db-area">
-            <!-- <div class="frame">
-            <div class="card-db">
-              <div class="header">
-                <span class="title big">Weekly report</span>
-                <span class="date small">01. Feb - 07. Feb</span>
-                <span class="type small">Revenue</span>
-                <span class="value">3621.79</span>
-              </div>
-              <div class="clearfix"></div>
-              <div class="parameter">
-                <span class="red">Views</span>
-                <span class="blue">Purchases</span>
-              </div>
-              <div class="statistic">
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-                <div class="line-3"></div>
-                <div class="data red">
-                  <svg>
-                    <polyline points="9,46 50,12 90,23 130,11 171,38 211,48 251,19"></polyline>    
-                  </svg>
-                  <div class="points">
-                    <div class="point-1">
-                      <div class="tooltip">458</div>
-                    </div>
-                    <div class="point-2">
-                      <div class="tooltip">812</div>
-                    </div>
-                    <div class="point-3">
-                      <div class="tooltip">746</div>
-                    </div>
-                    <div class="point-4">
-                      <div class="tooltip">877</div>
-                    </div>
-                    <div class="point-5">
-                      <div class="tooltip">517</div>
-                    </div>
-                    <div class="point-6">
-                      <div class="tooltip">434</div>
-                    </div>
-                    <div class="point-7">
-                      <div class="tooltip">458</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="data blue">
-                  <svg>
-                    <polyline points="9,61 50,50 90,65 130,55 171,61 211,74 251,64"></polyline>    
-                  </svg>
-                  <div class="points">
-                    <div class="point-1">
-                      <div class="tooltip">26</div>
-                    </div>
-                    <div class="point-2">
-                      <div class="tooltip">41</div>
-                    </div>
-                    <div class="point-3">
-                      <div class="tooltip">22</div>
-                    </div>
-                    <div class="point-4">
-                      <div class="tooltip">36</div>
-                    </div>
-                    <div class="point-5">
-                      <div class="tooltip">25</div>
-                    </div>
-                    <div class="point-6">
-                      <div class="tooltip">13</div>
-                    </div>
-                    <div class="point-7">
-                      <div class="tooltip">20</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="days">
-                <span class="day">Mon</span>
-                <span class="day">Tue</span>
-                <span class="day">Wed</span>
-                <span class="day">Thu</span>
-                <span class="day">Fri</span>
-                <span class="day">Sat</span>
-                <span class="day">Sun</span>
-              </div>
-            </div> 
-          </div> -->
-
-            <!-- 2ND GRAPH STARTS -->
+            
             <div class="main-container">
               <div class="year-stats">
                 <div class="month-group">
@@ -346,7 +227,7 @@
 
         <!-- PAGE 1 CONTENT STARTS -->
         <div class="profile-page">
-          <div id="page1Content" style="display: none">
+          <div id="admin-disp-student" style="display: none">
             <h3>Student Profile</h3>
             <div class="profile-wrap">
               <div class="">
@@ -360,8 +241,6 @@
 
               <div class="row r1">
                 <div class="user-card row">
-                  <!-- <div class="col-2"></div> -->
-
                   <div class="col-12 wrap-data">
                     <div class="card-data pt-5">
                       <h3>Divya Smreeti</h3>
@@ -395,7 +274,7 @@
         <!-- PAGE 1 CONTENT ENDS -->
 
         <!-- PAGE 2 CONTENT  -->
-        <div id="page2Content" style="display: none">
+        <div id="admin-disp-calendar" style="display: none">
           <div class="wrapper">
             <div class="container-calendar">
               <div id="left">
@@ -468,7 +347,7 @@
 
         <!-- PAGE 3 CONTENT STARTS -->
         <div class="drive-page">
-          <div id="page3Content" style="display: none">
+          <div id="admin-disp-drive" style="display: none;" >
             <div class="heading-drive">
               <div>Placement Drives Info</div>
               <!-- ADD DRIVE BUTTON -->
@@ -497,9 +376,7 @@
                     </div>
                     <div class="mt-5">
                       <h6>{{n.company_location}}</h6>
-                      <p>
-                        Job Description : {{n.job_description}}
-                      </p>
+                      <p>Job Description : {{n.job_description}}</p>
                       <h6>Eligibility: {{n.eligibility}}</h6>
                       <h6>Skills Required :{{n.skills}}</h6>
                       <h6>Min Stipend :{{n.min_stipend}}</h6>
@@ -510,55 +387,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="col-md-12 mb-5">
-                    <div class="card p-3 mb-2">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex flex-row align-items-center">
-                                <div class="ms-2 c-details">
-                                    <h4 class="mb-0">Company Name</h4> 
-                                    <span>1 days ago</span>
-                                </div>
-                            </div>
-                            <div class="badge"> <span class="badge1">Active</span> </div>
-                        </div>
-                        <div class="mt-5">
-                            <h6>Company Location</h6>
-                            <p>Job Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores harum, quos quidem voluptatem placeat voluptates optio nemo distinctio earum accusamus sequi corrupti nulla magnam atque eos animi fugiat repellat culpa!</p>
-                            <h6>Eligibility</h6>
-                            <h6>Skills Required : </h6>
-                            <h6>Min Stipend :</h6>
-                            <h6>Max Stipend :</h6>
-                            <h6>Date :</h6>
-                            <h6>Venue :</h6>
-                            <h6>Last Date to Apply :</h6> 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12 mb-5">
-                  <div class="card p-3 mb-2">
-                      <div class="d-flex justify-content-between">
-                          <div class="d-flex flex-row align-items-center">
-                              <div class="ms-2 c-details">
-                                  <h4 class="mb-0">Company Name</h4> 
-                                  <span>1 days ago</span>
-                              </div>
-                          </div>
-                          <div class="badge"> <span class="badge1">Active</span> </div>
-                      </div>
-                      <div class="mt-5">
-                          <h6>Company Location</h6>
-                          <p>Job Description : Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores harum, quos quidem voluptatem placeat voluptates optio nemo distinctio earum accusamus sequi corrupti nulla magnam atque eos animi fugiat repellat culpa!</p>
-                          <h6>Eligibility</h6>
-                          <h6>Skills Required : </h6>
-                          <h6>Min Stipend :</h6>
-                          <h6>Max Stipend :</h6>
-                          <h6>Date :</h6>
-                          <h6>Venue :</h6>
-                          <h6>Last Date to Apply :</h6> 
-                      </div>
-                  </div>
-              </div> -->
+                
               </div>
             </div>
             {% endfor %}
@@ -583,61 +412,44 @@
 
         <!-- PAGE 3 CONTENT ENDS -->
 
-        <!-- 
-          company name
-          company location
-          job description
-          eligibility
-          skills
-          min stipend
-          max stipend
-          date
-          venue
-          last date
-         -->
+        
       </div>
     </div>
 
     <!-- CONTENT AREA ENDS -->
-
-    <!-- Modal for New Post -->
-    <div
-      class="modal fade"
-      id="newPostModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="newPostModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="newPostModalLabel">New Post</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="newPostForm">
-              <div class="form-group">
-                <label for="postContent">Enter your news:</label>
-                <textarea
-                  class="form-control"
-                  id="postContent"
-                  rows="5"
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Save Post</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+      <script>
+      //         document.querySelector('#admin-studentinfo').addEventListener('click', function () {
+      //     showadminstudentinfo();
+      // });
+      // function showadminstudentinfo()
+      // {
+      //     document.getElementById("admin-disp-db").style.display="none";
+      //     document.getElementById("admin-disp-student").style.display="block";
+      //     document.getElementById("admin-disp-calendar").style.display="none";
+      //     document.getElementById("admin-disp-drive").style.display="none";    
+      // }
+      document.querySelector('#admin-drives').addEventListener('click', function () {
+          showadmindrives();
+      });
+      function showadmindrives()
+      {
+          document.getElementById("admin-disp-db").style.display="none";
+          // document.getElementById("admin-disp-student").style.display="none";
+          document.getElementById("admin-disp-calendar").style.display="none";
+          document.getElementById("admin-disp-drive").style.display="block";    
+      }
+      document.querySelector('#admin-calendar').addEventListener('click', function () {
+          showadmincalendar();
+      });
+      function showadmincalendar()
+      {
+          document.getElementById("admin-disp-db").style.display="none";
+          // document.getElementById("admin-disp-student").style.display="none";
+          document.getElementById("admin-disp-calendar").style.display="block";
+          document.getElementById("admin-disp-drive").style.display="none";    
+      }
+      </script>  
 
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script

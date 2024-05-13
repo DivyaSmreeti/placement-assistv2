@@ -1,13 +1,14 @@
 {% comment %} <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>customer page</title>
-</head>
-<body>
- <h1> hello {{ user.username }} your role is cutomer</h1>
-</body>
-</html> {% endcomment %}
+  </head>
+  <body>
+    <h1>hello {{ user.username }} your role is cutomer</h1>
+  </body>
+</html>
+{% endcomment %}
 
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,7 @@
     />
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../static/css/css/home.css" />
-    <link rel="stylesheet" href="../static/css/css/calendar.css"/>
+    <link rel="stylesheet" href="../static/css/css/calendar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -59,7 +60,6 @@
         </div>
 
         <ul class="list-unstyled components">
-          <!-- <p>Dummy Heading</p> -->
           <li>
             <i class="fa-solid fa-house" style="color: #ffffff"></i>
             <a id="dashboard" href="#"> Dashboard</a>
@@ -68,40 +68,20 @@
             <a href="#" id="details">Student Details</a>
           </li>
           <li>
-            <a
-              href="#pageSubmenu"
-              data-toggle="collapse"
-              aria-expanded="false"
-              class="dropdown-toggle"
-              >Pages</a
-            >
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-              <li>
-                <a href="#">Page 1</a>
-              </li>
-              <li>
-                <a href="#">Page 2</a>
-              </li>
-              <li>
-                <a href="#">Page 3</a>
-              </li>
-            </ul>
+            <a href="#" id="drives">Placement Drives</a>
           </li>
+
           <li>
             <a href="#" id="calendar">Full Calendar</a>
           </li>
           <li>
-            <a href="#" id="exams">Student's chat</a>
+            <a href="#" id="studentchat">HelpDesk</a>
           </li>
         </ul>
 
         <ul class="list-unstyled CTAs">
           <li>
-            <a type="button" id="newPostLink" class="download">New Post</a>
-            <!-- <button type="button" id="newPostLink" class="btn btn-success download">New Post</button> -->
-          </li>
-          <li>
-            <a href="#" class="article">Log Out</a>
+            <a href="/login" class="article">Log Out</a>
           </li>
         </ul>
       </nav>
@@ -129,201 +109,431 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Page1</a>
+                  <a class="nav-link" href="#">STUDENT</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Page2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Page3</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Page4</a>
-                </li>
+                
               </ul>
             </div>
           </div>
         </nav>
 
-        
         <!-- CONTENT AREA STARTS -->
 
         <!-- PAGE 1 CONTENT STARTS -->
-        <div class="profile-page" >
-        <div id="page1Content" style="display: none;" >
-        <h3>Student Profile</h3>
-        <div class="profile-wrap">
-          <div class="">
-            <div class="profile-row1">
-              <p>Profile</p>
-              <a type="button" id="newPostLink" class="download"
-                >Edit Profile</a
-              >
-            </div>
-          </div>
+        <div class="profile-page">
+          <div id="page1Content" style="display: none">
+            <h3>Student Profile</h3>
+            <div class="profile-wrap">
+              <div class="">
+                <div class="profile-row1">
+                  <p>Profile</p>
+                  <button type="button" id="editProfileBtn" class="download">
+                    Edit Profile
+                  </button>
+                </div>
+              </div>
 
-          <div class="row r1">
-            <div class="user-card row">
-              <div class="col-4"></div>
+              <div class="row r1">
+                <div class="user-card row">
+                  <div class="col-12 wrap-data">
+                    <div class="card-data pt-5">
+                      <h3 id="profileName">Divya Smreeti</h3>
+                      <p class="text-muted">Student</p>
 
-              <div class="col-8 wrap-data">
-                <div class="card-data pt-5">
-                    <h3>Divya Smreeti</h3>
-                    <p class="text-muted">Student</p>
-
-                    <div class="data-wrap">
-                      <div class="text-bold">
-                        <div>Department </div>
-                        <div>Enrollment No. </div>
-                        <div>Proficiency </div>
-                        <div>Contact No. </div>
-                        <div>Email Id </div>
-                        <div>Present Address </div>
-                      </div>
-                      <div class="text-ans">
-                        <div>IT</div>
-                        <div>GGV/21/01421</div>
-                        <div>DSA</div>
-                        <div>8936010020</div>
-                        <div>divyasmreeti@gmail.com</div>
-                        <div>Ranchi , Jharkhand</div>
+                      <div class="data-wrap">
+                        <div class="text-bold">
+                          <div>Department</div>
+                          <div>Enrollment No.</div>
+                          <div>Proficiency</div>
+                          <div>Contact No.</div>
+                          <div>Email Id</div>
+                          <div>Present Address</div>
+                        </div>
+                        <div class="text-ans">
+                          <div id="department">IT</div>
+                          <div id="enrollmentNo">GGV/21/01421</div>
+                          <div id="proficiency">DSA</div>
+                          <div id="contactNo">8936010020</div>
+                          <div id="email">divyasmreeti@gmail.com</div>
+                          <div id="address">Ranchi, Jharkhand</div>
+                        </div>
                       </div>
                     </div>
-                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="editProfileForm" style="display: none">
+            <h3>Edit Profile</h3>
+            <div class="edit-frm">
+              <form id="profileForm">
+                <div class="edit-frm-box">
+                  <div class="edt-frm-ques-box">
+                    <div><label for="editName">Name:</label></div>
 
+                    <div><label for="editDepartment">Department:</label></div>
+
+                    <div>
+                      <label for="editEnrollmentNo">Enrollment No.:</label>
+                    </div>
+
+                    <div><label for="editProficiency">Proficiency:</label></div>
+
+                    <div><label for="editContactNo">Contact No.:</label></div>
+
+                    <div><label for="editEmail">Email Id:</label></div>
+
+                    <div><label for="editAddress">Present Address:</label></div>
+                  </div>
+
+                  <div class="edt-frm-ipbox">
+                    <div class="">
+                      <input type="text" id="editName" required />
+                    </div>
+                    <div class="">
+                      <input type="text" id="editDepartment" required />
+                    </div>
+                    <div class="">
+                      <input type="text" id="editEnrollmentNo" required />
+                    </div>
+                    <div class="">
+                      <input type="text" id="editProficiency" required />
+                    </div>
+                    <div class="">
+                      <input type="text" id="editContactNo" required />
+                    </div>
+                    <div class="">
+                      <input type="email" id="editEmail" required />
+                    </div>
+                    <div class="">
+                      <input type="text" id="editAddress" required />
+                    </div>
+                  </div>
+                </div>
+                <div class="edt-frm-btns">
+                  <button type="submit">Save Profile</button>
+                  <button type="button" id="cancelEditBtn">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGE 2 CONTENT  -->
+        <div id="page2Content" style="display: none">
+          <div class="wrapper">
+            <div class="container-calendar">
+              <div id="left">
+                <h1>Dynamic Calendar</h1>
+                <div id="event-section">
+                  <h3>Add Event</h3>
+                  <input type="date" id="eventDate" />
+                  <input
+                    type="text"
+                    id="eventTitle"
+                    placeholder="Event Title"
+                  />
+                  <input
+                    type="text"
+                    id="eventDescription"
+                    placeholder="Event Description"
+                  />
+                  <button id="addEvent" onclick="addEvent()">Add</button>
+                </div>
+                <div id="reminder-section">
+                  <h3>Reminders</h3>
+                  <!-- List to display reminders -->
+                  <ul id="reminderList">
+                    <li data-event-id="1">
+                      <strong>Event Title</strong>
+                      - Event Description on Event Date
+                      <button class="delete-event" onclick="deleteEvent(1)">
+                        Delete
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="right">
+                <h3 id="monthAndYear"></h3>
+                <div class="button-container-calendar">
+                  <button id="previous" onclick="previous()">‹</button>
+                  <button id="next" onclick="next()">›</button>
+                </div>
+                <table class="table-calendar" id="calendar" data-lang="en">
+                  <thead id="thead-month"></thead>
+                  <!-- Table body for displaying the calendar -->
+                  <tbody id="calendar-body"></tbody>
+                </table>
+                <div class="footer-container-calendar">
+                  <label for="month">Jump To: </label>
+                  <!-- Dropdowns to select a specific month and year -->
+                  <select id="month" onchange="jump()">
+                    <option value="0">Jan</option>
+                    <option value="1">Feb</option>
+                    <option value="2">Mar</option>
+                    <option value="3">Apr</option>
+                    <option value="4">May</option>
+                    <option value="5">Jun</option>
+                    <option value="6">Jul</option>
+                    <option value="7">Aug</option>
+                    <option value="8">Sep</option>
+                    <option value="9">Oct</option>
+                    <option value="10">Nov</option>
+                    <option value="11">Dec</option>
+                  </select>
+                  <!-- Dropdown to select a specific year -->
+                  <select id="year" onchange="jump()"></select>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- PAGE 2 CONTENT ENDS  -->
 
+        <!-- PAGE FOR COMMENT SECTION STARTS -->
+        <div id="pageCommentContent" style="display: none">
+          <h1>Help Desk</h1>
+          <div class="comments">
+            <input
+              type="text"
+              id="commentInput"
+              placeholder="Write your queries or feedback..."
+            />
+            <button onclick="postComment()">Post</button>
+            <div id="commentList"></div>
+          </div>
         </div>
-      </div>
-      <!-- PAGE 1 CONTENT ENDS -->
+        <!-- PAGE FOR COMMENT SECTION ENDS -->
 
-      <!-- PAGE 2 CONTENT  -->
-      <div id="page2Content" style="display: none;" >
-        <div class="wrapper">
-          <div class="container-calendar">
-            <div id="left">
-              <h1>Dynamic Calendar</h1>
-              <div id="event-section">
-                <h3>Add Event</h3>
-                <input type="date" id="eventDate">
-                <input type="text"
-                  id="eventTitle"
-                  placeholder="Event Title">
-                <input type="text"
-                  id="eventDescription"
-                  placeholder="Event Description">
-                <button id="addEvent" onclick="addEvent()">
-                  Add
-                </button>
-              </div>
-              <div id="reminder-section">
-                <h3>Reminders</h3>
-                <!-- List to display reminders -->
-                <ul id="reminderList">
-                  <li data-event-id="1">
-                    <strong>Event Title</strong>
-                    - Event Description on Event Date
-                    <button class="delete-event"
-                      onclick="deleteEvent(1)">
-                      Delete
-                    </button>
-                  </li>
-                </ul>
+        <!-- PAGE 3 CONTENT STARTS -->
+        <div class="drive-page">
+          <div id="page3Content" style="display: none">
+            <div class="heading-drive">
+              <div>Placement Drives Info</div>
+              <!-- ADD DRIVE BUTTON -->
+              <!-- <button id="addDriveBtn" class="btn-success">
+                <a href="#">Add Drive</a>
+              </button> -->
+            </div>
+
+            <!-- CARDS FOR THE PAGE STARTS -->
+            <!-- CARD START -->
+            {% for n in companyData %}
+            <div class="container mt-5 mb-3">
+              <div class="row">
+                <div class="col-md-12 mb-5">
+                  <div class="card p-3 mb-2">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex flex-row align-items-center">
+                        <div class="ms-2 c-details">
+                          <h4 class="mb-0">{{n.company_name}}</h4>
+                          <span>1 days ago</span>
+                        </div>
+                      </div>
+                      <div class="badge">
+                        <span class="badge1">Active</span>
+                      </div>
+                    </div>
+                    <div class="mt-5">
+                      <h6>{{n.company_location}}</h6>
+                      <p>Job Description : {{n.job_description}}</p>
+                      <h6>Eligibility: {{n.eligibility}}</h6>
+                      <h6>Skills Required :{{n.skills}}</h6>
+                      <h6>Min Stipend :{{n.min_stipend}}</h6>
+                      <h6>Max Stipend :{{n.max_stipend}}</h6>
+                      <h6>Date :{{n.date}}</h6>
+                      <h6>Venue :{{n.venue}}</h6>
+                      <h6>Last Date to Apply :{{n.last_date}}</h6>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h1>Comment Section</h1>
+                  <div class="comments">
+                    <input
+                      type="text"
+                      id="commentInput"
+                      placeholder="Comment about your company of interest among the above given companies "
+                    />
+                    <button onclick="postComment()">Post</button>
+                    <div id="commentList"></div>
+                  </div>
+                </div>
+
+                
+                
               </div>
             </div>
-            <div id="right">
-              <h3 id="monthAndYear"></h3>
-              <div class="button-container-calendar">
-                <button id="previous"
-                    onclick="previous()">
-                  ‹
-                </button>
-                <button id="next"
-                    onclick="next()">
-                  ›
-                </button>
-              </div>
-              <table class="table-calendar"
-                id="calendar"
-                data-lang="en">
-                <thead id="thead-month"></thead>
-                <!-- Table body for displaying the calendar -->
-                <tbody id="calendar-body"></tbody>
-              </table>
-              <div class="footer-container-calendar">
-                <label for="month">Jump To: </label>
-                <!-- Dropdowns to select a specific month and year -->
-                <select id="month" onchange="jump()">
-                  <option value=0>Jan</option>
-                  <option value=1>Feb</option>
-                  <option value=2>Mar</option>
-                  <option value=3>Apr</option>
-                  <option value=4>May</option>
-                  <option value=5>Jun</option>
-                  <option value=6>Jul</option>
-                  <option value=7>Aug</option>
-                  <option value=8>Sep</option>
-                  <option value=9>Oct</option>
-                  <option value=10>Nov</option>
-                  <option value=11>Dec</option>
-                </select>
-                <!-- Dropdown to select a specific year -->
-                <select id="year" onchange="jump()"></select>
-              </div>
-            </div>
+            {% endfor %}
+            <!-- CARD ENDS  -->
           </div>
         </div>
       </div>
-<!-- PAGE 2 CONTENT  -->
-
-      </div>
     </div>
+
+    <!-- PAGE 1 CONTENT ENDS -->
 
     <!-- CONTENT AREA ENDS -->
 
-    <!-- Modal for New Post -->
-    <div
-      class="modal fade"
-      id="newPostModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="newPostModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="newPostModalLabel">New Post</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="newPostForm">
-              <div class="form-group">
-                <label for="postContent">Enter your news:</label>
-                <textarea
-                  class="form-control"
-                  id="postContent"
-                  rows="5"
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Save Post</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <script>
+      // Function to save profile details to local storage
+      function saveProfileToLocalStorage() {
+        const profileData = {
+          name: document.getElementById("profileName").textContent,
+          department: document.getElementById("department").textContent,
+          enrollmentNo: document.getElementById("enrollmentNo").textContent,
+          proficiency: document.getElementById("proficiency").textContent,
+          contactNo: document.getElementById("contactNo").textContent,
+          email: document.getElementById("email").textContent,
+          address: document.getElementById("address").textContent,
+        };
 
+        localStorage.setItem("profileData", JSON.stringify(profileData));
+      }
+
+      // Function to load profile details from local storage
+      function loadProfileFromLocalStorage() {
+        const profileDataString = localStorage.getItem("profileData");
+        if (profileDataString) {
+          const profileData = JSON.parse(profileDataString);
+          document.getElementById("profileName").textContent = profileData.name;
+          document.getElementById("department").textContent =
+            profileData.department;
+          document.getElementById("enrollmentNo").textContent =
+            profileData.enrollmentNo;
+          document.getElementById("proficiency").textContent =
+            profileData.proficiency;
+          document.getElementById("contactNo").textContent =
+            profileData.contactNo;
+          document.getElementById("email").textContent = profileData.email;
+          document.getElementById("address").textContent = profileData.address;
+        }
+      }
+
+      // Edit Profile Button
+      document
+        .getElementById("editProfileBtn")
+        .addEventListener("click", function () {
+          document.getElementById("page1Content").style.display = "none";
+          document.getElementById("editProfileForm").style.display = "block";
+
+          // Fill form fields with current profile details
+          document.getElementById("editName").value =
+            document.getElementById("profileName").textContent;
+          document.getElementById("editDepartment").value =
+            document.getElementById("department").textContent;
+          document.getElementById("editEnrollmentNo").value =
+            document.getElementById("enrollmentNo").textContent;
+          document.getElementById("editProficiency").value =
+            document.getElementById("proficiency").textContent;
+          document.getElementById("editContactNo").value =
+            document.getElementById("contactNo").textContent;
+          document.getElementById("editEmail").value =
+            document.getElementById("email").textContent;
+          document.getElementById("editAddress").value =
+            document.getElementById("address").textContent;
+        });
+
+      // Cancel Edit Button
+      document
+        .getElementById("cancelEditBtn")
+        .addEventListener("click", function () {
+          document.getElementById("page1Content").style.display = "block";
+          document.getElementById("editProfileForm").style.display = "none";
+        });
+
+      // Save Profile Button
+      document
+        .getElementById("profileForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Update profile details
+          document.getElementById("profileName").textContent =
+            document.getElementById("editName").value;
+          document.getElementById("department").textContent =
+            document.getElementById("editDepartment").value;
+          document.getElementById("enrollmentNo").textContent =
+            document.getElementById("editEnrollmentNo").value;
+          document.getElementById("proficiency").textContent =
+            document.getElementById("editProficiency").value;
+          document.getElementById("contactNo").textContent =
+            document.getElementById("editContactNo").value;
+          document.getElementById("email").textContent =
+            document.getElementById("editEmail").value;
+          document.getElementById("address").textContent =
+            document.getElementById("editAddress").value;
+
+          // Save updated profile details to local storage
+          saveProfileToLocalStorage();
+
+          // Display original profile view
+          document.getElementById("page1Content").style.display = "block";
+          document.getElementById("editProfileForm").style.display = "none";
+        });
+
+      // Load profile details from local storage when the page loads
+      window.addEventListener("load", function () {
+        loadProfileFromLocalStorage();
+      });
+
+      // FOR COMMENTS SECTION
+
+      // Function to retrieve comments from localStorage
+      function getComments() {
+        return JSON.parse(localStorage.getItem("comments")) || [];
+      }
+
+      // Function to save comments to localStorage
+      function saveComments(comments) {
+        localStorage.setItem("comments", JSON.stringify(comments));
+      }
+
+      // Function to display comments on the page
+      function displayComments() {
+        const commentList = document.getElementById("commentList");
+        const comments = getComments();
+        commentList.innerHTML = "";
+        comments.forEach((comment, index) => {
+          const commentItem = document.createElement("div");
+          commentItem.classList.add("comment-item");
+          commentItem.innerHTML = `
+            <p>${comment}</p>
+            <button onclick="deleteComment(${index})">Delete</button>
+        `;
+          commentList.appendChild(commentItem);
+        });
+      }
+
+      // Function to post a new comment
+      function postComment() {
+        const commentInput = document.getElementById("commentInput");
+        const comment = commentInput.value.trim();
+        if (comment !== "") {
+          const comments = getComments();
+          comments.push(comment);
+          saveComments(comments);
+          displayComments();
+          commentInput.value = "";
+        }
+      }
+
+      // Function to delete a comment
+      function deleteComment(index) {
+        const comments = getComments();
+        comments.splice(index, 1);
+        saveComments(comments);
+        displayComments();
+      }
+
+      // Display existing comments on page load
+      window.onload = function () {
+        displayComments();
+      };
+    </script>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

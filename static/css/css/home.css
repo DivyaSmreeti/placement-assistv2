@@ -140,6 +140,7 @@ ul.CTAs a {
     background: #fff;
     color: #7386D5 !important;
     cursor: pointer;
+    border: none;
 }
 .delete-post{
     background: #fff;
@@ -742,3 +743,83 @@ a.article
   }
   
   /* DASHBOARD CSS ENDS */
+
+
+  /* CSS FOR EDIT PROFILE FORM STARTS */
+  
+
+  .edit-frm-box {
+    display: flex;
+    flex-direction: row;
+}
+  .edt-frm-ques-box , .edt-frm-ipbox{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    margin-left: 3%;
+  }
+  .edt-frm-ques-box{
+    gap: 8px;
+    padding-right: 2%;
+  }
+  .edt-frm-ipbox{
+    gap: 10px;
+    
+  }
+  .edt-frm-ipbox input{
+    width: 20rem;
+  }
+
+  .edt-frm-btns{
+    margin-left: 3%;
+  }
+  .edt-frm-btns button{
+    margin-right: 3%;
+    border: none;
+    background-color: #B6D8F2;
+    padding: 0.5%;
+    padding-right: .8%;
+    padding-left: 0.8%;
+    border-radius: 5%;
+    cursor: pointer;
+  }
+  
+  
+  /* CSS FOR EDIT PROFILE FORM ENS */
+
+  .comm-container{
+    display: flex;
+    flex-direction: column;
+  }
+  #comments {
+    margin-bottom: 20px;
+  }
+  
+  #comments .comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  #commentInput {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  #comments .commbutton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .commbutton:hover {
+    background-color: #0056b3;
+  }
+
+  
+
